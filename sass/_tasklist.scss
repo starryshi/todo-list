@@ -1,0 +1,71 @@
+.task
+{
+    float: left;
+
+    width: 229px;
+    height: 100%;
+
+    border-right: 1px solid $bordercolor;
+    background: $backgroundcolor;
+}
+.status
+{
+    height: 39px;
+    padding-left: 10px;
+
+    border-bottom: 1px solid $bordercolor;
+    li
+    {
+        font-size: 12px;
+
+        display: inline-block;
+
+        width: 42px;
+        height: 20px;
+        margin: 10px 5px 12px 0;
+
+        cursor: pointer;
+        text-align: center;
+
+        border: 1px solid $backgroundcolor;
+    }
+}
+
+.status-selected
+{
+    border: 1px solid $activeborder;
+    border-radius: 2px;
+    background-color: $activecolor;
+}
+.task-list
+{
+    top: 40px;
+    bottom: 30px;
+
+    overflow: scroll;
+
+    background: #fff;
+
+    @extend %pos;
+}
+
+.editing
+{
+    display: none;
+}
+.completed
+{
+    color: green;
+}
+
+.task-list-item
+{
+    .delete
+    {
+        margin-top: 3px;
+    }
+    li:hover .delete
+    {
+        visibility: visible;
+    }
+}

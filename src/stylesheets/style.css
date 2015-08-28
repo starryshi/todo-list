@@ -1,0 +1,282 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+div, body, h1, h2, h3, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana; }
+
+ul, li {
+  list-style: none; }
+
+.category-wrap, .bottom, .task-list {
+  position: absolute;
+  width: 229px; }
+
+header {
+  height: 58px;
+  width: 100%;
+  border: 1px solid #cecece;
+  background: #dddddd;
+  line-height: 58px;
+  color: #999;
+  text-indent: 20px;
+  font-size: 20px; }
+
+.container {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  width: 100%; }
+
+.category {
+  float: left;
+  width: 229px;
+  height: 100%;
+  border-right: 1px solid #cecece;
+  background: #f2f2f2; }
+
+.category-wrap {
+  top: 0;
+  bottom: 25px;
+  overflow: scroll; }
+
+.all-category {
+  line-height: 50px;
+  height: 50px;
+  /*cursor: pointer;*/
+  padding-left: 10px; }
+
+.category-list {
+  font-size: 16px;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  width: 200px;
+  padding-left: 10px; }
+  .category-list div:hover,
+  .category-list li:hover {
+    background-color: #dbcfcf; }
+
+.category-list-item {
+  line-height: 30px;
+  cursor: pointer;
+  text-indent: 20px; }
+  .category-list-item li {
+    /*text-indent: 40px;*/
+    padding-left: 20px;
+    cursor: pointer; }
+    .category-list-item li:hover .delete {
+      visibility: visible; }
+  .category-list-item div:hover .delete {
+    visibility: visible; }
+
+.bottom {
+  bottom: 0;
+  height: 40px;
+  border-top: 1px solid #cecece;
+  background: #f2f2f2; }
+
+.add {
+  font-size: 12px;
+  line-height: 20px;
+  width: 120px;
+  height: 20px;
+  margin: 10px 60px;
+  cursor: pointer; }
+  .add span {
+    position: absolute;
+    margin-left: 10px; }
+
+.isChosen,
+.isSelected,
+.active {
+  border: 1px solid #9d7b7b;
+  border-radius: 2px;
+  background-color: #dbcfcf; }
+
+.delete {
+  font-size: 10px;
+  position: absolute;
+  right: 10px;
+  visibility: hidden;
+  margin-top: 8px; }
+  .delete:hover {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f33333; }
+
+.task {
+  float: left;
+  width: 229px;
+  height: 100%;
+  border-right: 1px solid #cecece;
+  background: #f2f2f2; }
+
+.status {
+  height: 39px;
+  padding-left: 10px;
+  border-bottom: 1px solid #cecece; }
+  .status li {
+    font-size: 12px;
+    display: inline-block;
+    width: 42px;
+    height: 20px;
+    margin: 10px 5px 12px 0;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #f2f2f2; }
+
+.status-selected {
+  border: 1px solid #9d7b7b;
+  border-radius: 2px;
+  background-color: #dbcfcf; }
+
+.task-list {
+  top: 40px;
+  bottom: 30px;
+  overflow: scroll;
+  background: #fff; }
+
+.editing {
+  display: none; }
+
+.completed {
+  color: green; }
+
+.task-list-item .delete {
+  margin-top: 3px; }
+.task-list-item li:hover .delete {
+  visibility: visible; }
+
+.content {
+  position: absolute;
+  right: 0;
+  left: 460px;
+  height: 100%;
+  background: #fff; }
+
+.task-info {
+  line-height: 49px;
+  width: 100%;
+  height: 49px;
+  border-bottom: 1px solid #cecece;
+  background: #f2f2f2; }
+  .task-info img {
+    float: right;
+    margin: 10px;
+    cursor: pointer; }
+  .task-info .editing {
+    float: right;
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+    margin-right: 40px;
+    border-radius: 5px;
+    background-color: #ccbaba;
+    box-shadow: 1px 1px; }
+
+.task-title {
+  font-size: 16px;
+  margin-left: 16px;
+  border: none;
+  background: #f2f2f2; }
+
+.taskdate {
+  font-size: 14px;
+  text-indent: 16px;
+  background: #fafaee; }
+
+.task-date {
+  border: none;
+  background: #fafaee; }
+
+.taskdetails {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 95%;
+  padding: 20px; }
+
+.task-details {
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  background: #fff; }
+
+.task-editing {
+  border: 1px solid #757d9b; }
+
+.tips {
+  font-size: 14px;
+  padding-left: 30px;
+  color: red; }
+
+.mask {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .1;
+  background: #000; }
+
+.dialog-category {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 220px;
+  margin-top: -100px;
+  margin-left: -180px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  background: #fbf5f3; }
+
+.dialog-title {
+  font-size: 18px;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #b4a4a4; }
+  .dialog-title span {
+    float: right;
+    cursor: pointer; }
+
+.dialog-content {
+  line-height: 2;
+  padding-top: 20px;
+  text-align: center; }
+
+.dialog input {
+  width: 150px; }
+.dialog .error {
+  padding-top: 10px;
+  text-align: center;
+  color: red; }
+
+.category-select {
+  width: 152px;
+  margin-left: 48px; }
+
+.dialog-ok {
+  margin: 20px auto;
+  text-align: center; }
+  .dialog-ok .btn {
+    margin-right: 30px; }
+
+.hidden {
+  display: none; }
+
+@media screen and (max-width: 780px) {
+  header, .container {
+    width: 780px; } }
+@media screen and (max-height: 400px) {
+  body {
+    height: 400px; } }

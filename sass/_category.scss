@@ -1,0 +1,131 @@
+.category
+{
+    float: left;
+
+    width: 229px;
+    height: 100%;
+
+    border-right: 1px solid $bordercolor;
+    background: $backgroundcolor;
+}
+.category-wrap
+{
+    top: 0;
+    bottom: 25px;
+
+    overflow: scroll;
+
+    @extend %pos;
+}
+.all-category
+{
+    line-height: 50px;
+
+    height: 50px;
+    /*cursor: pointer;*/
+    padding-left: 10px;
+}
+.category-list
+{
+    font-size: 16px;
+
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+
+    width: 200px;
+    padding-left: 10px;
+    div:hover,
+    li:hover
+    {
+        background-color: $activecolor;
+    }
+}
+
+.category-list-item
+{
+    line-height: 30px;
+
+    cursor: pointer;
+    text-indent: 20px;
+    li
+    {
+        /*text-indent: 40px;*/
+        padding-left: 20px;
+
+        cursor: pointer;
+        &:hover .delete
+        {
+            visibility: visible;
+        }
+    }
+    div
+    {
+        &:hover .delete
+        {
+            visibility: visible;
+        }
+    }
+}
+
+
+
+
+
+.bottom
+{
+    @extend %pos;
+    bottom: 0;
+
+    
+    height: 40px;
+
+    border-top: 1px solid $bordercolor;
+    background: #f2f2f2;
+}
+.add
+{
+    font-size: 12px;
+    line-height: 20px;
+
+    width: 120px;
+    height: 20px;
+    margin: 10px 60px;
+
+    cursor: pointer;
+    span
+    {
+        position: absolute;
+
+        margin-left: 10px;
+    }
+}
+
+
+
+.isChosen,
+.isSelected,
+.active
+{
+    border: 1px solid $activeborder;
+    border-radius: 2px;
+    background-color: $activecolor;
+}
+.delete
+{
+    font-size: 10px;
+
+    position: absolute;
+    right: 10px;
+
+    visibility: hidden;
+
+    margin-top: 8px;
+    &:hover
+    {
+        overflow: hidden;
+
+        border-radius: 8px;
+        background-color: #f33333;
+    }
+}

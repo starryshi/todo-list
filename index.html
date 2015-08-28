@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>To Do List</title>
+	<link rel="stylesheet" href="dist/css/style.min.css">
+	
+</head>
+<body>
+	<header>
+		To Do List
+	</header>
+	<div class='container'>
+		<!--分类栏  -->
+		<div class="category">
+			<div class="category-wrap">
+				<div class="all-category">
+					所有任务 (<span class="task-num"></span>)
+				</div>
+				<div class="category-list">
+					分类列表
+				</div>
+			</div>
+			<div class="bottom">
+					<div class="add addCategory" >
+						<img src="src/img/add.png" alt="add">
+						<span>新增分类</span>
+					</div>
+			</div>
+		</div>
+		<!-- 任务栏 -->
+		<div class="task">
+			<div class="status">
+				<ul>	
+					<li class="active">所有</li>
+					<li>未完成</li>
+					<li>已完成</li>
+				</ul>
+			</div>
+			<ul class="task-list">
+				
+			</ul>
+			<div class="bottom">
+				<div class="add addTask">
+					<img src="src/img/add.png" alt="add">
+					<span>新增任务</span>
+				</div>
+			</div>
+		</div>
+		<!-- 内容栏 -->
+		<div class="content">
+			<div class="task-info tasktitle">
+				<input type="text" class="task-title" name="" value="" disabled="disabled" placeholder="任务标题">
+				<span class='tips'></span>
+				<img class="complete" src="src/img/complete.png" alt="完成">
+				<img class="edit" src="src/img/edit.png" alt="编辑">
+				<button class="editing btn-cancel">放弃</button>
+				<button class="editing btn-save">保存</button>
+				
+
+			</div>
+			<div class="task-info taskdate">
+				任务时间：
+				<input type="text" class="task-date" name="" value="" placeholder="YYYY-MM-DD"  disabled="disabled" >
+			</div>
+			<div class=" taskdetails">
+				<textarea class="task-details" name="" disabled="disabled" >
+					
+				</textarea>
+			</div>
+
+		</div>
+
+		<!-- 对话框 -->
+		<div class="mask hidden"></div>
+		<div class="dialog dialog-category hidden">
+			<div class="dialog-title">
+				新增分类
+				<span>X</span>
+			</div>
+			<div class="dialog-content">
+				<label>新增分类名称：</label>
+				<input type="text" class="category-name" placeholder="输入新增的分类名称"><br>
+				<label>文件夹：</label>
+				<select class="category-select">
+					<option value="new-category">新增分类</option>
+				</select>
+			</div>
+			<div class='error'></div>
+			<div class="dialog-ok">
+				<button class="confirm btn">确认</button>
+				<button class="cancel btn">取消</button>
+			</div>
+		</div>
+
+	</div>
+
+	
+	
+    <script src="src/js/require.js" data-main = "src/js/main"></script>
+</body>
+</html>
